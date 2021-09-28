@@ -50,5 +50,10 @@ namespace BusinessLayer.Concrete
         {
             return _blogDal.GetListAll();
         }
+
+        public List<Blog> GetBlogListWithCategory(int id)
+        {
+           return _blogDal.GetBlogListWithCategory(id);
+        }
     }
 }
