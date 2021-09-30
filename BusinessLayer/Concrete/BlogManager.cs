@@ -70,5 +70,10 @@ namespace BusinessLayer.Concrete
         {
             return _blogDal.GetBlogWriterID(id);
         }
+
+        public List<Blog> GetBlogListLastThree()
+        {
+            return _blogDal.GetBlogListLastThree();
+        }
     }
 }
