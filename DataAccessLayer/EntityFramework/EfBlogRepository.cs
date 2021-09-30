@@ -19,10 +19,28 @@ namespace DataAccessLayer.EntityFramework
                 return c.Blogs.Where(x => x.CategoryID == id).ToList();
         }
 
+        public List<Blog> GetBlogOtherListWriter(int WriterID, int BlogID)
+        {
+            using (var c = new Context())
+                return c.Blogs.Where(x => x.WriterID == WriterID && x.BlogID!=BlogID).ToList();
+        }
+
+        public int GetBlogWriterID(int id)
+        {
+            using (var c = new Context())
+                return c.Blogs.Where(x => x.BlogID == id).FirstOrDefault().WriterID;
+        }
+
         public List<Blog> GetListWithCategory()
         {
             using (var c = new Context())
                 return c.Blogs.Include(x => x.Category).ToList();
+        }
+
+        public Blog LastBlog()
+        {
+            using (var c = new Context())
+                return c.Blogs.OrderBy(u => u.BlogID).LastOrDefault();
         }
     }
 }
