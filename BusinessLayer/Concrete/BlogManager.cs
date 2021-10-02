@@ -61,19 +61,24 @@ namespace BusinessLayer.Concrete
             return _blogDal.LastBlog();
         }
 
-        public List<Blog> GetBlogOtherListWriter(int WriterID, int BlogID)
-        {
-            return _blogDal.GetBlogOtherListWriter(WriterID,BlogID);
-        }
+        //public List<Blog> GetBlogOtherListWriter(int WriterID, int BlogID)
+        //{
+        //    return _blogDal.GetBlogOtherListWriter(WriterID,BlogID);
+        //}
 
-        public int GetBlogWriterID(int id)
-        {
-            return _blogDal.GetBlogWriterID(id);
-        }
+        //public int GetBlogWriterID(int id)
+        //{
+        //    return _blogDal.GetBlogWriterID(id);
+        //}
 
         public List<Blog> GetBlogListLastThree()
         {
             return _blogDal.GetBlogListLastThree();
+        }
+
+        public List<Blog> GetBlogListWriter(int id)
+        {
+            return _blogDal.GetListAll(x=>x.WriterID==id);
         }
     }
 }

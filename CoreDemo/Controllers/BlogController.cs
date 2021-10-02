@@ -19,7 +19,7 @@ namespace CoreDemo.Controllers
         public IActionResult BlogReadAll(int id)
         {
             ViewBag.i = id;
-            ViewBag.WriterID = bm.GetBlogWriterID(id);
+            //ViewBag.WriterID = bm.GetBlogWriterID(id);
             var values = bm.GetBlogByID(id);
             return View(values);
         }
