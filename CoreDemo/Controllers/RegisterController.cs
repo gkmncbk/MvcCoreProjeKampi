@@ -21,45 +21,20 @@ namespace CoreDemo.Controllers
         public IActionResult Index()
         {
 
-            List<CityViewModel> cwm = new List<CityViewModel>()
-            {
-                new CityViewModel
-                {
-                    CityID=1,
-                    CityName="Ankara",
-                    CityStatus=true
-                },
-                  new CityViewModel
-                {
-                    CityID=2,
-                    CityName="İstanbul",
-                    CityStatus=true
-                },
-                 new CityViewModel
-                {
-                    CityID=3,
-                    CityName="İzmir",
-                    CityStatus=true
-                },
-                  new CityViewModel
-                {
-                    CityID=4,
-                    CityName="Konya",
-                    CityStatus=true
-                },
-            };
-
-
-            IEnumerable<SelectListItem> cm = cwm.ToList()
-                                           .Select(i => new SelectListItem()
-                                           {
-                                               Text = i.CityName,
-                                               Value = i.CityID.ToString()
-                                           });
-
-            ViewBag.Citys = cm;
-
-
+            ViewBag.Citys = new List<CityViewModel>
+                            {
+                                new CityViewModel() {CityID = 1, CityName = "Ankara"},
+                                new CityViewModel() {CityID = 2, CityName = "İstanbul"},
+                                new CityViewModel() {CityID = 3, CityName = "İzmir"},
+                                new CityViewModel() {CityID = 4, CityName = "Bursa"}
+                                                                                        }.Select(i => new SelectListItem()
+                                                                                        {
+                                                                                            Text = i.CityName,
+                                                                                            Value = i.CityID.ToString(),
+                                                                                            
+                                                                                        });
+             List<Country> CountriesTable = Country.GetFakeCountries();
+            ViewBag.CountriesData = new SelectList(CountriesTable, "WriterCityID", "CountryName");
             return View();
         }
         [HttpPost]
@@ -79,7 +54,7 @@ namespace CoreDemo.Controllers
                 foreach (var item in result.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
-                }              
+                }
             }
             return View();
         }

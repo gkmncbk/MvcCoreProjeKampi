@@ -6,6 +6,7 @@
 
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <section class="main-content-w3layouts-agileits">
     <div class="container">
@@ -17,8 +18,8 @@
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Adınız Soyadınız</label>
-                            @Html.TextBoxFor(x=>x.WriterName, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => x.WriterName,"", new { @class = "text-danger" })
+                            @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.WriterName, "", new { @class = "text-danger" })
                             @*<input type="text" class="form-control" id="validationDefault01" name="WriterName" placeholder="" required="">*@
                         </div>
                         <div class="col-md-6 mb-3">
@@ -36,34 +37,83 @@
                             @*    <input type="password" class="form-control" id="password1" name="WriterPassword" placeholder="" required="">*@
                         </div>
                         <div class="form-group col-md-6">
+                            <label for="exampleInputPassword2 mb-2">Şifre (Tekrar)</label>
+                            @Html.PasswordFor(x => x.WriterPasswordConfirm, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.WriterPasswordConfirm, "", new { @class = "text-danger" })
+                            @*    <input type="password" class="form-control" id="password1" name="WriterPassword" placeholder="" required="">*@
+                        </div>
+
+                        <div class="form-group col-md-6">
                             <label for="exampleInputPassword2 mb-2">Görsel Dosya Yolu</label>
                             @Html.TextBoxFor(x => x.WriterImage, new { @class = "form-control" })
                             @Html.ValidationMessageFor(x => x.WriterImage, "", new { @class = "text-danger" })
                             @*<input type="text" class="form-control" id="password2" name="WriterImage" placeholder="" required="">*@
                         </div>
 
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-md-6">
-                           @* <label for="exampleInputPassword1 mb-2">Şehir</label>*@
-                            @*@Html.DropDownList("CityViewModel", (IEnumerable<SelectListItem>)ViewBag.Citys, new { @class = "form-control" })*@
+                            <label for="exampleInputPassword2 mb-2">Şehir</label>
+                            @*  @Html.DropDownListFor(x =>x.WriterCity, (IEnumerable<SelectListItem>)ViewBag.Citys, "Lütfen Seçiniz", new { @class = "dropdown form-control" })*@
+                            @Html.DropDownList("WriterCityID", (SelectList)ViewBag.CountriesData, "Lütfen Seçiniz", new { @class = "dropdown form-control" })
+                          @*  @Html.ValidationMessageFor(x => x.WriterCity, "", new { @class = "text-danger" })*@
+                            @*<input type="text" class="form-control" id="password2" name="WriterImage" placeholder="" required="">*@
                         </div>
                     </div>
+
+
+                    <label id="btn1" onclick="check()">
+                        @*<input type="checkbox" id="myCheck" name="rate" value="Fixed Rate">*@
+                        @Html.CheckBoxFor(x => x.WriterAgreement, new { @id = "myCheck" })
+                        Tüm şartları okudum, kabul ediyorum.
+                    </label>
+                    <br />
+                    @Html.ValidationMessageFor(x => x.WriterAgreement, "", new { @class = "text-danger" })
+                    <hr />
                     <button type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
-                    <p>
-                        <a href="#" id="btn1">Tüm şartları okudum, kabul ediyorum.</a>
-                    </p>
+
                 }
+
+                @*<hr />
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                @Html.DropDownList("CityID", (IEnumerable<SelectListItem>)ViewBag.Citys, new { @class = "form-control" })
+            </div>
+        </div>*@
 
             </div>
         </div>
     </div>
     <br />
     <script>
-        $('#btn1').click(function () {
+        function check() {
+            if (document.getElementById("myCheck").checked == true) {
 
-            swal("Site Kabul Şartları","Sitemizde verdiğiniz mail adresi üzerinden bilgi ve haber e-postaları spam ölçüsüne varmadan gönderilmeye devam edilecektir. Eğer eposta bülteninden çıkmak isterseniz mail ileti dizisini durdurabilirsiniz, şifre ve mail adresleniz şifrelenmiş formatta herhangi bir kullanıcının görmayeceği şekilde veritabanlarımızda saklanmaktadır.");
-        });
+                document.getElementById("myCheck").checked = false;
+                Swal.fire({
+                    title: 'Site Kabul Şartları',
+                    input: 'checkbox',
+                    //inputValue: 1,
+                    text: 'Sitemizde verdiğiniz mail adresi üzerinden bilgi ve haber e-postaları spam ölçüsüne varmadan gönderilmeye devam edilecektir. Eğer eposta bülteninden çıkmak isterseniz mail ileti dizisini durdurabilirsiniz, şifre ve mail adresleniz şifrelenmiş formatta herhangi bir kullanıcının görmayeceği şekilde veritabanlarımızda saklanmaktadır.',
+                    inputPlaceholder: 'Kabul Ediyorum',                    
+                    
+                    confirmButtonColor: '#DD6B55',
+                    confirmButtonText: 'Kapat',
+                   
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        if (result.value) {
+                            document.getElementById("myCheck").checked = true;
+
+                        } else {
+                            document.getElementById("myCheck").checked = false;
+                        }
+                    } else {
+                        console.log(`modal was dismissed by ${result.dismiss}`)
+                    }
+                });
+            }
+
+        };
+
     </script>
 </section>
 
