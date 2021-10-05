@@ -52,10 +52,7 @@
 
                         <div class="form-group col-md-6">
                             <label for="exampleInputPassword2 mb-2">Şehir</label>
-                            @*  @Html.DropDownListFor(x =>x.WriterCity, (IEnumerable<SelectListItem>)ViewBag.Citys, "Lütfen Seçiniz", new { @class = "dropdown form-control" })*@
-                            @Html.DropDownList("WriterCityID", (SelectList)ViewBag.CountriesData, "Lütfen Seçiniz", new { @class = "dropdown form-control" })
-                          @*  @Html.ValidationMessageFor(x => x.WriterCity, "", new { @class = "text-danger" })*@
-                            @*<input type="text" class="form-control" id="password2" name="WriterImage" placeholder="" required="">*@
+                            @*@Html.DropDownList("WriterCityID", (SelectList)ViewBag.CountriesData, "Lütfen Seçiniz", new { @class = "dropdown form-control" })*@
                         </div>
                     </div>
 
