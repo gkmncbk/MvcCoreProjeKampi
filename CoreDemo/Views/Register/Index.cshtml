@@ -52,7 +52,7 @@
 
                         <div class="form-group col-md-6">
                             <label for="exampleInputPassword2 mb-2">Şehir</label>
-                            @*@Html.DropDownList("WriterCityID", (SelectList)ViewBag.CountriesData, "Lütfen Seçiniz", new { @class = "dropdown form-control" })*@
+                          @Html.DropDownList("CityID", (SelectList)ViewBag.CityList, "Lütfen Seçiniz", new { @class = "dropdown form-control" })
                         </div>
                     </div>
 

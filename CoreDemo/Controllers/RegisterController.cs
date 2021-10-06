@@ -20,21 +20,7 @@ namespace CoreDemo.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-
-            ViewBag.Citys = new List<CityViewModel>
-                            {
-                                new CityViewModel() {CityID = 1, CityName = "Ankara"},
-                                new CityViewModel() {CityID = 2, CityName = "İstanbul"},
-                                new CityViewModel() {CityID = 3, CityName = "İzmir"},
-                                new CityViewModel() {CityID = 4, CityName = "Bursa"}
-                                                                                        }.Select(i => new SelectListItem()
-                                                                                        {
-                                                                                            Text = i.CityName,
-                                                                                            Value = i.CityID.ToString(),
-                                                                                            
-                                                                                        });
-             List<Country> CountriesTable = Country.GetFakeCountries();
-            ViewBag.CountriesData = new SelectList(CountriesTable, "WriterCityID", "CountryName");
+            ViewBag.CityList = new SelectList(CityViewModel.GetCityList(), "CityID", "CityName");
             return View();
         }
         [HttpPost]
@@ -51,6 +37,8 @@ namespace CoreDemo.Controllers
             }
             else
             {
+                ViewBag.CityList = new SelectList(CityViewModel.GetCityList(), "CityID", "CityName");
+
                 foreach (var item in result.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);

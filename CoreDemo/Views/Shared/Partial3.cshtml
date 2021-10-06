@@ -14,22 +14,10 @@
 
             @await Component.InvokeAsync("LastThreeBlog")
             <!-- subscribe -->
-            <div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
-                <h2>
-                    Haber bültenimize kaydolun
-                </h2>
-                <div class="subscribe-main text-left">
-                    <div class="subscribe-form">
-                        <form action="#" method="post" class="subscribe_form">
-                            <input class="form-control" type="email" placeholder="Email adresiniz..." required="">
-                            <button type="submit" class="btn btn-primary submit">Gönder</button>
-                        </form>
-                        <div class="clearfix"> </div>
-                    </div>
-                    @*<p>We respect your privacy.No spam ever!</p>*@
-                </div>
-                <!-- //subscribe -->
-            </div>
+        <div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
+            @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+            <!-- //subscribe -->
+        </div>
         </div>
         <!-- footer -->
         <div class="footer-cpy text-center">
