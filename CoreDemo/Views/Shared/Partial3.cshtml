@@ -3,10 +3,12 @@
         <div class="row">
             <div class="col-lg-4 footer-grid-agileits-w3ls text-left">
                 <h3>Hakkımızda</h3>
-                <p>Bilişim ve teknolojinin hemen her alanda ihtiyaçtan öte sorumluluk haline geldiği çağımızda, zamanın 
-                gerisinde kalmak yerine ötesine geçmek isteyen tüm kurumlara hizmet veren şirketimiz edindiği
-                deneyim ve müşteri odaklı çalışmalarıyla sektöründe lider konuma gelmiştir. Teknolojinin büyük önem kazandığı 
-                çağımızda sahip olduğumuz yüksek ...</p>
+                <p>
+                    Bilişim ve teknolojinin hemen her alanda ihtiyaçtan öte sorumluluk haline geldiği çağımızda, zamanın
+                    gerisinde kalmak yerine ötesine geçmek isteyen tüm kurumlara hizmet veren şirketimiz edindiği
+                    deneyim ve müşteri odaklı çalışmalarıyla sektöründe lider konuma gelmiştir. Teknolojinin büyük önem kazandığı
+                    çağımızda sahip olduğumuz yüksek ...
+                </p>
                 <div class="read">
                     <a href="#" class="btn btn-primary read-m">Devamını Oku</a>
                 </div>
@@ -14,10 +16,22 @@
 
             @await Component.InvokeAsync("LastThreeBlog")
             <!-- subscribe -->
-        <div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
-            @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
-            <!-- //subscribe -->
-        </div>
+            <div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
+                <div class="tech-btm">
+                    <h4>Mail bültenine abone olun</h4>
+                    <p>Teknoloji, yazılım ve diger bloglar ...</p>
+
+                    <form action="#" method="post">
+
+                        <input type="hidden" id="RouteID" name="RouteID" value=@ViewBag.RouteID />
+                        <input type="email" placeholder="Email" required="" name="Mail" id="Mail">
+                        <input type="submit" value="Abone Ol">
+                    </form>
+
+                </div>
+                @*@await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")*@
+                <!-- //subscribe -->
+            </div>
         </div>
         <!-- footer -->
         <div class="footer-cpy text-center">

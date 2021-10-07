@@ -76,7 +76,7 @@
                         </div>
 
                         @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
-
+                        @*@await Component.InvokeAsync("deneme1", new { id = ViewBag.i })*@
                         @await Component.InvokeAsync("CategoryList")
                         @await Component.InvokeAsync("WriterLastBlog")
 
