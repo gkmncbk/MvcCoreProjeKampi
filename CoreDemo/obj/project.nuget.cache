@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0winzmRl9UgSzIS/ZUiV8u+wATXMyBX5tuiZUVVJ8eHBvExzJMSvJM+1eVxSaQScicm6iZaVpexJg9u8CwL/zg==",
+  "dgSpecHash": "R0mku9znHHv+D07o6Jb/3GY32SM5/JL+0fCXxMRPWpPdOaia1zEDy/2TidRp1ileHuvtsyOZGkJrHT/WzLQIEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\GKMNCBK\\source\\repos\\CoreDemo\\CoreDemo\\CoreDemo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\GKMNCBK\\.nuget\\packages\\bootstrap\\5.1.0\\bootstrap.5.1.0.nupkg.sha512",
     "C:\\Users\\GKMNCBK\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512",
     "C:\\Users\\GKMNCBK\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.3\\fluentvalidation.aspnetcore.10.3.3.nupkg.sha512",
     "C:\\Users\\GKMNCBK\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.3\\fluentvalidation.dependencyinjectionextensions.10.3.3.nupkg.sha512",
