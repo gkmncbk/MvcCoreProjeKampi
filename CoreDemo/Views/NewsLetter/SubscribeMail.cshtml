@@ -9,29 +9,123 @@
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <div class="tech-btm">
- 
-    <p>Teknoloji, yazılım ve diger bloglar ...</p>
- 
-    <form action="/NewsLetter/SubscribeMail/"
-          data-ajax="true"
-          data-ajax-method="POST"   
-          data-ajax-success="OnSuccess">
 
+    <p>Teknoloji, yazılım ve diger bloglar ...</p>
+
+    @*<form action="/NewsLetter/SubscribeMail/"
+              data-ajax="true"
+              data-ajax-method="POST"
+              data-ajax-success="OnSuccess">
+
+            <input type="hidden" id="RouteID" name="RouteID" value=@ViewBag.RouteID />
+            <input type="email" placeholder="Email" required="" name="Mail" id="Mail">
+            <input type="submit" value="Abone Ol">
+        </form>*@
+    @*<form id="subscriptionForm" action="/NewsLetter/SubscribeMail" method="post">*@
+    @using (Html.BeginForm("SubscribeMail", "NewsLetter", FormMethod.Post, new { @id = "subscriptionForm", @name = "subscriptionForm" }))
+    {
         <input type="hidden" id="RouteID" name="RouteID" value=@ViewBag.RouteID />
         <input type="email" placeholder="Email" required="" name="Mail" id="Mail">
-        <input type="submit" value="Abone Ol">
-    </form> 
-
+        <input type="button" id="Save" value="Abone Ol">
+        <span id="msg" style="color:red;" />
+    }
+    @* </form>*@
 </div>
 <script type="text/javascript">
-    function OnSuccess(response) {
-        document.getElementById("Mail").value = "";        
-        Swal.fire({           
-            icon: 'success',
-            title: 'Tebrikler',
-            text:  'Mail bültenimize başarıyla abone oldunuz.',
-            showConfirmButton: false,
-            timer: 1500
-        })
-    }
+    $('#Save').click(function () {
+        var form = $("#subscriptionForm");
+        var url = form.attr("action");
+        var formData = form.serialize();
+        $.post(url, formData, function (data) {
+
+
+
+            if (data == null) {
+                document.getElementById("Mail").value = "";
+                swal.fire({
+                    icon: 'success',
+                    title: 'Tebrikler',
+                    text: 'Mail bültenimize başarıyla abone oldunuz.',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                //window.setTimeout(function () { window.location.reload() }, 1500);
+            }
+            else {
+
+                let hatalar = "";
+                //const fruits = data;
+                data.forEach(myFunction);
+                function myFunction(item) {
+                    hatalar += "- " + item + "<br>";
+                }
+
+
+                swal.fire({
+                    icon: 'error',
+                    title: 'HATA',
+                    html: hatalar,
+                    //text: hatalar,
+                    showConfirmButton: true,
+                    //timer: 1500
+                });
+            }
+            /*$("#msg").html(data);*/
+
+        });
+    })
+    //function myFunction(item, index) {
+    //    text += index + ": " + item + "<br>";
+    //};
 </script>
+
+@*<script type="text/javascript">
+    $('#Save').click(function () {
+
+        var form = $("#subscriptionForm");
+        var url = form.attr("action");
+        var formData = form.serialize();
+        $.post(url, formData, function (data) {
+
+
+
+
+
+            /*$("#msg").html(data);*/
+            if (data == null) {
+                document.getElementById("Mail").value = "";
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Tebrikler',
+                    text: 'Mail bültenimize başarıyla abone oldunuz.',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+            else {
+                swal.fire({
+                    icon: 'error',
+                    title: 'HATA',
+                    text: data[0],
+                    showConfirmButton: true,
+                    //timer: 1500
+                });
+            }
+        });
+
+
+    })
+</script>*@
+
+@*<script type="text/javascript">
+        function OnSuccess(response) {
+            document.getElementById("Mail").value = "";
+            Swal.fire({
+                icon: 'success',
+                title: 'Tebrikler',
+                text:  'Mail bültenimize başarıyla abone oldunuz.',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    </script>*@

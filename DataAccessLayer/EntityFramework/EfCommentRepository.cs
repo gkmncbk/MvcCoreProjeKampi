@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.Repositories;
 using EntityLayer.Concrete;
 using System;
@@ -11,5 +12,10 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfCommentRepository : GenericRepository<Comment>, ICommentDal
     {
+        public List<Comment> GetCommentListWithBlog(int id)
+        {
+            using (var c = new Context())
+                return c.Comments.Where(x => x.BlogID == id).ToList();
+        }
     }
 }

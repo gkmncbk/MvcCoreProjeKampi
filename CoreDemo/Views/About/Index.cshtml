@@ -36,26 +36,27 @@
                             </p>
                         }
 
-                        <a href="single.html" class="btn btn-primary read-m">Read More</a>
+                        @*    <a href="single.html" class="btn btn-primary read-m">Read More</a>*@
                     </div>
                 </div>
                 <!--//left-->
                 <!--right-->
                 <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
                     <div class="right-blog-info text-left">
-                        <div class="tech-btm">
-                            <img src="~/CoreBlogTema/images/banner1.jpg" class="img-fluid" alt="">
-                        </div>
+                        @*<div class="tech-btm">
+                                <img src="~/CoreBlogTema/images/banner1.jpg" class="img-fluid" alt="">
+                            </div>
 
-                        @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+                            @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")*@
 
                         @await Html.PartialAsync("~/Views/About/SocialMediaAbout.cshtml")
 
 
-                        <div class="tech-btm">
-                            <h4>Son Postlar</h4>
-                            @await Component.InvokeAsync("WriterLastBlog")
-                        </div>
+                        @*<div class="tech-btm">
+                                <h4>Son Postlar</h4>
+                                @await Component.InvokeAsync("WriterLastBlog")
+                            </div>*@
+                        @await Component.InvokeAsync("LastThreeBlog")
                     </div>
 
                 </aside>
