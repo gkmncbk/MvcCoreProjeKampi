@@ -21,3 +21,4 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\CoreLayer\obj\Debug\net5.0\CoreLayer.cspr
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreLayer\obj\Debug\net5.0\CoreLayer.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreLayer\obj\Debug\net5.0\ref\CoreLayer.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreLayer\obj\Debug\net5.0\CoreLayer.pdb
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.AssemblyReference.cache
