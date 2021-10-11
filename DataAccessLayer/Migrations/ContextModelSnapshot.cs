@@ -197,9 +197,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CityID")
-                        .HasColumnType("int");
-
                     b.Property<string>("WriterAbout")
                         .HasColumnType("nvarchar(max)");
 

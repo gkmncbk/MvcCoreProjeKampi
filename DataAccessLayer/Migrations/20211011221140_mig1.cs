@@ -59,6 +59,20 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "NewsLetters",
+                columns: table => new
+                {
+                    MailID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Mail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MailStatus = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NewsLetters", x => x.MailID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Writers",
                 columns: table => new
                 {
@@ -69,6 +83,8 @@ namespace DataAccessLayer.Migrations
                     WriterImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     WriterMail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     WriterPassword = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    WriterPasswordConfirm = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    WriterAgreement = table.Column<bool>(type: "bit", nullable: false),
                     WriterStatus = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -158,6 +174,9 @@ namespace DataAccessLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "Contacts");
+
+            migrationBuilder.DropTable(
+                name: "NewsLetters");
 
             migrationBuilder.DropTable(
                 name: "Blogs");
