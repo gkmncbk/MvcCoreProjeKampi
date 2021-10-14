@@ -50,6 +50,10 @@ namespace BusinessLayer.Concrete
         {
             return _blogDal.GetListAll();
         }
+        public List<Blog> GetLast3Blog()
+        {
+            return _blogDal.GetListAll().OrderByDescending(x => x.BlogID).Take(3).ToList();
+        }
 
         public List<Blog> GetBlogListWithCategory(int id)
         {
@@ -71,10 +75,10 @@ namespace BusinessLayer.Concrete
         //    return _blogDal.GetBlogWriterID(id);
         //}
 
-        public List<Blog> GetBlogListLastThree()
-        {
-            return _blogDal.GetBlogListLastThree();
-        }
+        //public List<Blog> GetBlogListLastThree()
+        //{
+        //    return _blogDal.GetBlogListLastThree();
+        //}
 
         public List<Blog> GetBlogListWriter(int id)
         {

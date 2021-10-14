@@ -9,8 +9,12 @@ namespace CoreDemo.Controllers
 {
     public class WriterController : Controller
     {
-       
         public IActionResult Index()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        public IActionResult Test()
         {
             return View();
         }
