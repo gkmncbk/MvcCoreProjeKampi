@@ -467,6 +467,8 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Sha
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\CommentListByBlog\Default.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\LastBlog\Default.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterLastBlog\Default.cshtml.g.cs
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterMessageNotification\Default.cshtml.g.cs
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterNotification\Default.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Partial1.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Partial2.cshtml.g.cs
@@ -477,6 +479,8 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Sha
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\Index.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\Test.cshtml.g.cs
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\WriterFooterPartial.cshtml.g.cs
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\WriterNavbarPartial.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.RazorTargetAssemblyInfo.cache

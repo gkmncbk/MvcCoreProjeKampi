@@ -21,7 +21,8 @@ namespace CoreDemo.Controllers
         }
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Index(Writer p)
+        //public async Task<IActionResult> Index(Writer p)
+        public async Task<Boolean> Index(Writer p)
         {
             Context c = new Context();
             var dataValue = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail &&
@@ -36,11 +37,13 @@ namespace CoreDemo.Controllers
                 var useridentity = new ClaimsIdentity(claims, "a");
                 ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
                 await HttpContext.SignInAsync(principal);
-                return RedirectToAction("Index", "Writer");
+                return true;
+                //return RedirectToAction("Index", "Writer");
             }
             else
             {
-                return View();
+                //return View();
+                return false;
             }
 
 

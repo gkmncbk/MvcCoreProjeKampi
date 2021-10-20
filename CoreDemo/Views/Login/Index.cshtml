@@ -3,13 +3,19 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
 
 <section class="main-content-w3layouts-agileits">
     <div class="container">
         <h3 class="tittle">Oturum Aç</h3>
         <div class="row inner-sec">
             <div class="login p-5 bg-light mx-auto mw-100">
-                <form method="post">
+                <form id="loginform" action="/login/index/" method="post">
                     <div class="form-group">
                         <label for="exampleInputEmail1 mb-2">Mail Adresi</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" name="WriterMail" aria-describedby="emailHelp" placeholder="" required="">
@@ -22,7 +28,8 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Beni hatırla</label>
                     </div>
-                    <button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
+                    @*<button id="gonder" type="button" class="btn btn-primary submit mb-4">Giriş Yap</button>*@
+                    <input type="button" id="gonder" value="Giriş Yap">
                     <p><a href="/Register/Index/"> Bir hesabın yok mu?</a></p>
                 </form>
             </div>
@@ -30,4 +37,43 @@
     </div>
 </section>
 
+<script type="text/javascript">
+    $('#gonder').click(function () {
 
+        var form = $("#loginform");
+        var url = form.attr("action");
+        var formData = form.serialize();
+        $.post(url, formData, function (data) {
+
+
+
+            if (data == true) {
+
+                swal.fire({
+                    icon: 'success',
+                    title: 'Tebrikler',
+                    text: 'Giriş Başarılı',
+                    showConfirmButton: false,
+                    timer: 1500,
+
+                });
+
+                window.setTimeout(function () {window.location.href = "@Url.Action("Index", "Writer")"}, 1500);
+            }
+            else {
+
+
+                swal.fire({
+                    icon: 'error',
+                    title: 'HATA',
+
+                    text: 'Email adresi yada şifre hatalı',
+                    showConfirmButton: true,
+
+                });
+            }
+
+        });
+    })
+
+</script>
