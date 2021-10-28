@@ -491,3 +491,5 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\ref\CoreDemo.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.pdb
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.genruntimeconfig.cache
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\BloglistByWriter.cshtml.g.cs
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\BlogAdd.cshtml.g.cs
