@@ -439,9 +439,8 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.MvcApp
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.RazorAssemblyInfo.cache
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.RazorAssemblyInfo.cs
-C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\staticwebassets\CoreDemo.StaticWebAssets.Manifest.cache
-C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\staticwebassets\CoreDemo.StaticWebAssets.xml
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\scopedcss\bundle\CoreDemo.styles.css
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\staticwebassets\CoreDemo.StaticWebAssets.Manifest.cache
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.TagHelpers.input.cache
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.TagHelpers.output.cache
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.RazorCoreGenerate.cache
@@ -493,3 +492,4 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\ref\CoreDemo.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.pdb
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.genruntimeconfig.cache
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\EditBlog.cshtml.g.cs
