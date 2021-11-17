@@ -493,3 +493,4 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\ref\CoreDemo.dl
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.pdb
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.genruntimeconfig.cache
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\EditBlog.cshtml.g.cs
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
