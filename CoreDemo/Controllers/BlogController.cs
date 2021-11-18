@@ -87,6 +87,22 @@ namespace CoreDemo.Controllers
             bm.TDelete(blogvalue);
             return RedirectToAction("BlogListByWriter");
         }
+        [HttpPost]
+        public JsonResult DeleteBlog2(int id)
+        {
+            try
+            {
+                var blogvalue = bm.TGetById(id);
+                //bm.TDelete(blogvalue);
+                return Json(true);
+            }
+            catch (Exception)
+            {
+                return Json(false);
+            }
+  
+ 
+        }
         [HttpGet]
         public IActionResult EditBlog(int id)
         {
