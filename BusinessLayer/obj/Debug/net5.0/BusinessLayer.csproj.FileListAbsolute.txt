@@ -48,3 +48,4 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\BusinessLayer\obj\Debug\net5.0\BusinessLa
 C:\Users\GKMNCBK\source\repos\CoreDemo\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
+C:\Users\GKMNCBK\source\repos\CoreDemo\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CopyComplete
