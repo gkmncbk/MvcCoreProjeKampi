@@ -51,4 +51,3 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\DataAccessLayer\obj\Debug\net5.0\DataAcce
 C:\Users\GKMNCBK\source\repos\CoreDemo\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\GKMNCBK\source\repos\CoreDemo\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\GKMNCBK\source\repos\CoreDemo\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.genruntimeconfig.cache
-C:\Users\GKMNCBK\source\repos\CoreDemo\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CopyComplete
