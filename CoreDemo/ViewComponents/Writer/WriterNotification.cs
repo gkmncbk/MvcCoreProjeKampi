@@ -10,10 +10,11 @@ namespace CoreDemo.ViewComponents.Writer
 {
     public class WriterNotification : ViewComponent
     {
-        WriterManager wm = new WriterManager(new EfWriterRepository());
+        NotificationManager nm = new NotificationManager(new EfNotificationRepository());
         public IViewComponentResult Invoke()
         {
-            return View();
+            var values = nm.GetList();
+            return View(values);
         }
     }
 }
