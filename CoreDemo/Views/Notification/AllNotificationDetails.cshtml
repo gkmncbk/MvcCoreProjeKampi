@@ -1,0 +1,31 @@
+﻿@using EntityLayer.Concrete
+@model List<Notification>
+@{
+    ViewData["Title"] = "AllNotificationDetails";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1 class="col-12 grid-margin stretch-card">TÜM BİLDİRİMLER</h1>
+
+@foreach (var item in Model)
+{
+    if (item.NotificationStatus)
+    {
+
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">@item.NotificationType</h4>
+                    <hr />
+
+                    <div class="form-group">
+                        <label>@item.NotificationDetails</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    }
+
+}

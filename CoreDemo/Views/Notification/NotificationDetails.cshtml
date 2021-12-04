@@ -1,0 +1,21 @@
+﻿@model EntityLayer.Concrete.Notification
+@{
+    ViewData["Title"] = "NotificationDetails";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@Model.NotificationType</h4>
+                <hr />
+
+                    <div class="form-group">
+                        <label>@Model.NotificationDetails</label>
+                        
+                    </div>
+                   
+            </div>
+        </div>
+    </div>
+

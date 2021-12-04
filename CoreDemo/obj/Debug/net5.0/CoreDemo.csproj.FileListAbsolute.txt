@@ -499,3 +499,5 @@ C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\CoreDemo.genrun
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterAboutOnDashbord\Default.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\WriterEditProfile.cshtml.g.cs
 C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\WriterAdd.cshtml.g.cs
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Notification\NotificationDetails.cshtml.g.cs
+C:\Users\GKMNCBK\source\repos\CoreDemo\CoreDemo\obj\Debug\net5.0\Razor\Views\Notification\AllNotificationDetails.cshtml.g.cs

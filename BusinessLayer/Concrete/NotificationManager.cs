@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrete
 
         public Notification TGetById(int id)
         {
-            throw new NotImplementedException();
+            return _notificationDal.GetById(id);
         }
 
         public void TUpdate(Notification t)
