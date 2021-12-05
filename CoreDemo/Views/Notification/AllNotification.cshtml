@@ -1,0 +1,122 @@
+﻿@using EntityLayer.Concrete
+@model List<Notification>
+@{
+    string sure = "";
+    DateTime now = DateTime.Now;
+}
+
+@{
+    ViewData["Title"] = "AllNotification";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+@*<h1>BİLDİRİMLER</h1>*@
+@*<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Bildirim</th>
+        <th>Zaman</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.NotificationStatus)
+        {
+            TimeSpan zaman = now.Subtract(item.NotificationDate);
+
+            if (zaman.Days == 0)
+            {
+                if (zaman.Minutes == 0 && zaman.Hours == 0)
+                {
+                    sure = "Şimdi";
+                }
+                else if (zaman.Minutes > 0 && zaman.Hours == 0)
+                {
+                    sure = zaman.Minutes + " dakika önce";
+                }
+                else
+                {
+                    sure = zaman.Hours + " saat " + zaman.Minutes + " dakika önce";
+                }
+            }
+            else
+            {
+                if (zaman.Hours == 0)
+                {
+                    sure = zaman.Days + " gün önce";
+                }
+                else
+                {
+                    sure = zaman.Days + " gün " + zaman.Hours + " saat önce";
+                }
+            }
+            <tr>
+                <td>@item.NotificationID</td>
+                <td>@item.NotificationDetails</td>
+                <td>@sure</td>
+            </tr>
+        }
+
+    }
+</table>*@
+
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">BİLDİRİMLER</h4>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th> # </th>
+                        <th> Bildirim </th>
+                        <th> Zaman </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (item.NotificationStatus)
+                        {
+                            TimeSpan zaman = now.Subtract(item.NotificationDate);
+
+                            if (zaman.Days == 0)
+                            {
+                                if (zaman.Minutes == 0 && zaman.Hours == 0)
+                                {
+                                    sure = "Şimdi";
+                                }
+                                else if (zaman.Minutes > 0 && zaman.Hours == 0)
+                                {
+                                    sure = zaman.Minutes + " dakika önce";
+                                }
+                                else
+                                {
+                                    sure = zaman.Hours + " saat " + zaman.Minutes + " dakika önce";
+                                }
+                            }
+                            else
+                            {
+                                if (zaman.Hours == 0)
+                                {
+                                    sure = zaman.Days + " gün önce";
+                                }
+                                else
+                                {
+                                    sure = zaman.Days + " gün " + zaman.Hours + " saat önce";
+                                }
+                            }
+                            <tr>
+                                <td> @item.NotificationID </td>
+                                <td> @item.NotificationDetails </td>  
+                                <td>@sure </td>
+    
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
